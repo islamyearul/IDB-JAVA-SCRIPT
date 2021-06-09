@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.formm{
+			width: 500px;
+			height: 300px;
+			margin-left: 500px;
+		}
+		h1{
+			color: #E1076E
+		}
+		div{
+			background: #F3A0F8;
+			padding-top: 50px;
+			padding-left: 280PX;
+			padding-bottom: 50PX;
+			font-size: 20pt;
+			font-weight: bolder;
+
+		}
+	</style>
+</head>
+<body>
+	<script>
+		function mylove(){
+
+			var cupid = Math.random();
+
+			cupid = Math.floor(cupid*100);
+
+			var n= document.formin.name.value;
+
+			var bf = document.formin.bfname.value;
+
+			var positive = n+" and "+bf+" Love each Other \= "+cupid+"%";
+
+			if (n=="") {
+				alert("Please Enter Your Name");
+			} else if (bf=="") {
+				alert("Please Enter Your GF/BF Name");				
+			} else{
+				alert(positive);
+			
+			} 
+		}
+	</script>
+	<div class="nam">
+		<form action="" name="formin" >
+			Your name:
+			<input type="text" name="name" size="40"> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+			Your GF/BF Name: 
+			<input type="text" name="bfname" size="40">
+		</form>
+	</div><hr>
+	<center><h1>Click the Image For Show Rerults</h1></center>
+	<form action="" name="heart" class="formm">
+		
+		<input type="image" src="lovecalculator.png" name="ache" onclick="mylove()" border=5px height="300" width="300">
+	</form>
+</body>
+</html>

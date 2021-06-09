@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		function newDom(){
+			var addTag=document.createElement("h1"); //Create NEW elements
+			var solution=document.createTextNode("The Brave New DOM!"); //Create New Text
+			addTag.appendChild(solution); //Put New TExt Into new Elements
+			document.body.appendChild(addTag); //Append The Whole Thing to Child
+		}
+	</script>
+</head>
+<body bgcolor="peru">
+	<div>
+		<h1 id="brownOnBlack">The Browser are Not gratting along!</h1>
+		<form>
+			<input type="button" name="button" value="What Is The Solution" onclick="newDom()">
+		</form>
+	</div>
+</body>
+</html>

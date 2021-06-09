@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form">
+					<table>
+				<tr>
+					<td>Name: </td>
+					<td>
+						<input type="text" name="name">
+					</td>
+				</tr>
+				<tr>
+					<td>Phone: </td>
+					<td>
+						<input type="text" name="phone">
+					</td>
+				</tr>
+				<tr>
+					<td>Email: </td>
+					<td>
+						<input type="email" name="email">
+					</td>
+				</tr>
+				<tr>
+					<td>Gender: </td>
+					<td>
+						<input type="radio" name="sex" value="Male">Male
+						<input type="radio" name="sex" value="Male">Female
+					</td>
+				</tr>
+				<tr>
+					<td>Address: </td>
+					<td>
+						<textarea name="address" id="" cols="30" rows="2"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>City: </td>
+					<td>
+						<select name="country" id="">
+							<option value="">--Select One--</option>
+							<option value="Dhaka">Dhaka</option>
+							<option value="Noakhali">Noakhali</option>
+							<option value="Khulna">Khulna</option>
+							<option value="Bogra">Bogra</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+						<input type="button" value="Submit" onclick="Myfun()">
+					</td>
+					<td>
+						<input type="reset" name="reset" value="Reset">
+					</td>
+				</tr>
+			</table>
+	</form>
+	<script>
+		function Myfun(){
+		var n=document.form.name.value;
+		var p=document.form.phone.value;
+		var e=document.form.email.value;
+		var s=document.form.sex.value;
+		var a=document.form.address.value;
+		var c=document.form.country.value;
+		var res= "Name: "+n +"<br>"+"phone: "+p +"<br>"+"email: "+e +"<br>"+"sex: "+s +"<br>"+"address: "+a+"<br>" +"City: "+ c
+	
+			if (n=="") {
+				alert('Please Enter Your Name');
+				return false
+			} else if (p=="") {
+				alert('Please Enter Your Phone');
+				return false
+				
+			} else if (e=="") {
+				alert('Please Enter Your Email');
+				return false
+				
+			} else if (s=="") {
+				alert('Please Enter Your Gender');
+				return false
+			} else if (a=="") {
+				alert('Please Enter Your Address');
+				return false
+			} else if (c=="") {
+				alert('Please chose City');
+				return false			
+			}
+			var mywin = window.open("", "My Win", "height=500 width=800");
+
+			mywin.document.write(res)
+		}
+	</script>
+</body>
+</html>

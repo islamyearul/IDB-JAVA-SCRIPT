@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Form</title>
+	<style>
+		.registrationform{
+			margin-top: 50px;
+		}
+		input{
+			border: 1px solid #2975FF;
+		}
+		.area{
+			background-color: #ECE8E8;
+			height: 500px;
+		}
+		#show{
+			margin-left: 400px;
+			margin-right: 400px;
+			font-size: 16pt;
+			color: red;
+		}
+		.formdiv{
+			background-color: #EFF8C4;
+		}
+		.registrationform{
+			background-color: #F2B9B9;
+			width: 500px;
+			margin-left: 400px;
+			font-size: 15pt;
+			padding: 10px;
+
+
+		}
+
+	</style>
+</head>
+<body>
+	<div class="formdiv">
+	<form action="" class="registrationform" name="form" id="registrationform">
+		<br><h2 align="center">Novell Service Login</h2>
+		<table class="tablee" align="center" cellpadding="5px">
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" id="name" name="name" required=""></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password" id="password" minlength="6" required=""></td>
+			</tr>
+			<tr>
+				<td>City Of Employment:</td>
+				<td><input type="text" id="city" name="city"></td>
+			</tr>
+			<tr>
+				<td>Web server:</td>
+				<td>
+					<select name="server" id="server">
+						<option name="server" value="">--Choose a server--</option>
+						<option name="server" value="MySQL">MySQL</option>
+						<option name="server" value="FB">FB</option>
+						<option name="server" value="Tornado">Tornado</option>
+						<option name="server" value="Demo">Demo</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Please specify your role:</td>
+				<td id="post" name="role">
+					<input type="radio" name="role" value="Admin">Admin <br>
+					<input type="radio" name="role" value="Engineer">Engineer <br>
+					<input type="radio" name="role" value="Manager">Manager <br>
+					<input type="radio" name="role" value="Guest">Guest <br>
+				</td>
+			</tr>
+			<tr>
+				<td>Single Sign-on to the following:</td>
+				<td id="sign">
+					<input type="checkbox" id="mail" class="signn" value="Mail">Mail <br>
+					<input type="checkbox" class="signn" value="Payroll">Payroll <br>
+					<input type="checkbox" class="signn" value="Self-service">Self-service <br>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<input id="entry" type="button" onclick="displayDetails()" name="login" value="Login">
+				</td>
+				<td>
+					<input type="reset" name="reset" value="Reset">
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+	<script>
+		function displayDetails(){
+			var newDisplay = "";
+			var myForm = document.form.length;
+			for(var i=0; i<myForm; i++){
+				newDisplay+= document.forms[0].elements[i].value+"\n";
+
+			}
+			document.forms[1].elements[0].value = newDisplay;
+					}
+	</script>
+
+
+	<hr><hr>
+	<div class="area">
+		<br><center><h2>Here Is form Content</h2></center>
+		<form action="">
+			<textarea name="" id="" cols="30" rows="10"></textarea>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form">
+		<input type="date" name="date" id="myDate"> <br><br>
+
+		<input type="button" name="submit" value="Chaeck Year" onclick="yEar()"><br><br>
+		<!-- <input type="button" name="submit" value="Chaeck Day" onclick="dAy()"><br><br>
+		<input type="button" name="submit" value="Chaeck Date" onclick="dAte()"><br><br> -->
+	</form>
+
+	<div id="show"></div>
+	<script>
+		function yEar(){
+			var x = document.getElementById("myDate").value;
+			var dat = new Date();
+			var year = dat.getFullYear();
+			var day = dat.getDay();
+			var date = dat.getDate();
+			var month = dat.getMonth();
+
+			var week = ["Sun", "Mon", "Tue", "Wed", "Thus", "Fri", "Sat"];
+			var weekk = week[day];
+			var mont = ["Jan", "Feb", "Mar", "Afr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+			var montht = mont[month];
+
+			var res = "Year Is "+ year+ "<br>" + "Day Is "+ weekk +"<br>"+"Date Is "+ date + "<br>" + "Month Is "+montht ;
+
+			document.getElementById('show').innerHTML=res;
+		}
+		
+	</script>
+
+</body>
+</html>

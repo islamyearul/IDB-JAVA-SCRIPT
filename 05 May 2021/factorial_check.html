@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form">
+		<h2>Enter A valid Number</h2>
+		<input type="text" name="number"> <br> <br>
+		<input type="button" name="submit" value="Check" onclick="myfun()">
+	</form>
+
+<script>
+	function myfun(){
+		var input = document.form.number.value;
+
+		var fact=1;
+		for( var i=1; i<=input; i++){
+			fact *= i; 
+		}
+		document.write("The Factorial of " + input + " is " + fact);
+	}
+</script>
+</body>
+</html>

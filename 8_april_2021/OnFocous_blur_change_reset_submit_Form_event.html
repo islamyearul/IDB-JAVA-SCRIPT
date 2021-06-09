@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<form>
+			<center><h2>Form Event</h2></center><br><hr>
+			<input type="text" onfocus="autowrite()" size="50"> On Focous<br><br>
+			<input type="text" onblur="autowrite2()" size="50"> On Blur<br><br>
+			<input type="text" onchange="autowrite3()" size="50"> On Change<br><br>
+			<input type="text" onclick="autowrite4()" size="50"> On Mouse Click for reset<br><br>
+			<input type="text" onclick="autowrite5()" size="50"> On Mouse Clock for Submit<br><br>
+			<input type="reset" value="Reset">
+		</form>
+		<script>
+			function autowrite(){
+				document.forms[0].elements[0].value="Greetings earthing, Hope you are fine dear sonamoni";
+			}
+			function autowrite2(){
+				document.forms[0].elements[1].value="Greetings earthing, Hope you are fine dear sonamoni";
+			}
+			function autowrite3(){
+				document.forms[0].elements[2].value="Greetings earthing, Hope you are fine dear sonamoni";
+			}
+			function autowrite4(){
+				document.forms[0].reset();
+			}
+			function autowrite5(){
+				document.forms[0].submit();
+			}
+
+
+	</script>
+	</div>
+</body>
+</html>

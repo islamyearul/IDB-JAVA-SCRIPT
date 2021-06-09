@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+			function goLeft(){
+				var left = parent.info.document.position.hereL.value;
+				parent.info.location=left;
+			}
+			function goRight(){
+				var right = parent.info.document.position.herer.value;
+				parent.info.location=right;
+			}
+	</script>
+	<form action="" name="direction">
+		<input type="button" value="<=Left" onclick="goLeft()">
+		<input type="button" value="<=Right" onclick="goRight()">
+	</form>
+</body>
+</html>

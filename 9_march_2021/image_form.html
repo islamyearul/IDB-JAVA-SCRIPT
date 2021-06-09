@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function mylove(){
+			var cupid = Math.random();
+			cupid = Math.floor(cupid*100);
+			var throb="";
+			if (cupid>50) {
+				throb = "He Loves Me";
+			} else{
+				throb="He Dosen\'t Loves Me"
+			}
+			alert(throb)
+		}
+	</script>
+	<form action="" name="heart">
+		<input type="image" src="love.jpg" name="ache" onclick="mylove()" border=0>
+	</form>
+</body>
+</html>

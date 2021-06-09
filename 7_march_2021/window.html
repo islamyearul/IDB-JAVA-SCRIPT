@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var display = "<h3>"+self.name+ "<h3>";
+		display +="<div class='bod'>";
+		var gone=" ";
+		var alpha = self.closed;
+		if(alpha==false){
+			var gone = 'never';
+
+		}
+
+		display += "This window has " + gone + " been closed.<br>";
+		//change the massage in the lower left corner
+		self.defaultStatus="\"This wondow property can be changed.\"";
+		display+= "The dafault status reads: " + self.defaultStatus+ "<br></div>";
+		document.write(display)
+	</script>
+</body>
+</html>

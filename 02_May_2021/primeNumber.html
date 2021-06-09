@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		form{
+			width: 40%;
+			height: 200px;
+			margin: 50px 400px;
+			padding: 50px;
+			background: #028C2C;
+			color: #fff;
+			font-size: 20pt;
+			font-weight: 700;
+		}
+
+	</style>
+</head>
+<body>
+	<form action="" name="form">
+		<label for="number">Input A Number</label> &nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="text" name="number"><br><br>
+		<input type="button" name="submit" value="Check" onclick="myfun()">
+	</form>
+	<script>
+		function myfun(){
+			var num = document.form.number.value;
+			if (num==0) {
+				alert(num + " Not Allowed");
+				return false;
+			} else if (num==1) {
+				alert(num + " Is Not Prime Number");
+				return false;
+			} else if (num==2) {
+				alert(num + " Is Prime Number");
+				return false;
+			} else{
+				for(i=2; i<num; i++){
+					if(num%i==0) {
+						alert(num + " is not a prime number");
+						return false;
+					}
+					
+				} //for loop end
+				alert(num + " is a prime number")
+			}
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function goGetIt(){
+			window.location=document.form.field.value;
+		}
+	</script>
+
+	<form action="" name="form">
+		<input type="file" name="field" size="100"><br><br>
+		<input type="button" value="Check" onclick="goGetIt()">
+	</form>
+</body>
+</html>
