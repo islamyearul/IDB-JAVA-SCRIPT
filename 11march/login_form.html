@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Form</title>
+	<style>
+		.form{
+			margin-top: 50px;
+		}
+		input{
+			border: 1px solid #2975FF;
+		}
+
+	</style>
+</head>
+<body>
+	<form action="" class="form">
+		<h2 align="center">Novell Service Login</h2>
+		<table class="tablee" align="center" cellpadding="5px">
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" name="uname" required=""></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password" minlength="6" required=""></td>
+			</tr>
+			<tr>
+				<td>City Of Employment:</td>
+				<td><input type="text" name="city"></td>
+			</tr>
+			<tr>
+				<td>Web server:</td>
+				<td>
+					<select name="server" id="">
+						<option value="">--Choose a server--</option>
+						<option value="">MySQL</option>
+						<option value="">FB</option>
+						<option value="">Tornado</option>
+						<option value="">Demo</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Please specify your role:</td>
+				<td>
+					<input type="radio" name="role">Admin <br>
+					<input type="radio" name="role">Engineer <br>
+					<input type="radio" name="role">Manager <br>
+					<input type="radio" name="role">Guest <br>
+				</td>
+			</tr>
+			<tr>
+				<td>Single Sign-on to the following:</td>
+				<td>
+					<input type="checkbox" name="sign">Mail <br>
+					<input type="checkbox" name="sign">Payroll <br>
+					<input type="checkbox" name="sign">Self-service <br>
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<input type="submit" name="login" value="Login">
+				</td>
+				<td>
+					<input type="reset" name="reset" value="Reset">
+				</td>
+			</tr>
+
+		</table>
+		
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>For In Loop</title>
+</head>
+<body>
+	<div>
+		<div id="show"></div>
+		<script>
+			var obj = {name:"Bablu", fname:"no-name", age:"68", phone:"01564546545"};
+			var text = "";
+			var x;
+			for(x in obj){
+				text += obj[x]+ " ";
+				document.getElementById('show').innerHTML = text;
+			}
+			//document.write(text)
+		</script><hr>
+
+		<script>
+document.write("<ol>")
+			var obj = {name:"Bablu", fname:"no-name of father", age:"68", phone:"01564546545"};
+			var x;
+			for(x in obj){
+				document.write("<li>"+obj[x] + "</li>" + "<br>")
+
+			}
+document.write("<ol>")
+		</script>
+		
+	</div>
+</body>
+</html>

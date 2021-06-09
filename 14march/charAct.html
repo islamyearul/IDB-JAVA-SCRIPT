@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var str = "Today is Sunday";
+		var char = str.charAt(7);
+		document.write(char);
+	</script><br><hr>
+
+
+	<script>
+		var found = "Email Addresss Is Missing @ symbol";
+
+		var emailAdd =  prompt("Please Enter your email address:", "");
+		//alert(emailAdd);
+		//document.write(emailAdd);
+
+		for(var counter=0; counter<=emailAdd.length; counter++){
+			var findAt = emailAdd.charAt(counter);
+			if (findAt== "@") {
+				found = "Email Address has @ symbol";
+			}
+		}
+		document.write(found);
+
+
+
+	</script>
+</body>
+</html>

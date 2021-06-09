@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+		<form action="" name="myform">
+			<input type="text" name="pnum"><br><br>
+			<input type="button" name="submit" value="Submit" onclick="alert(myfun())">
+		</form>
+	</div>
+	<script>
+		function myfun(){
+			var input = document.myform.pnum.value;
+			if (input==0) {
+				return input +  " is not a allowed"
+			} else if (input==1) {
+				return input + " is not a prime number"
+			} else if (input==2) {
+				return input + " is a prime number"
+			} else{
+				for(i=2; i<input; i++){
+					if (input*i==0) {
+						return input + " is not a prime number"
+					}
+				}
+				return input + " is not a prime number"
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="logform">
+		<lebel>Name: </lebel> &nbsp; <input type="text" name="name"><br>
+		<lebel>City: </lebel> &nbsp; <input type="text" name="city"><br>
+		<!-- <lebel>Address: </lebel> &nbsp; <input type="text" name="address"><br>
+		<lebel>Hobby: </lebel> &nbsp; <input type="text" name="hobby"><br> -->
+		<input type="button" value="Click" onclick="myfun()">
+
+	</form><br>
+	<script>
+		function myfun(){
+			with(document.logform){
+				var fname = name.value;
+				var ccity = city.value;
+				// var address = address.value;
+				// var hobby = hobby.value;
+
+						var output = fname + "<br>" + ccity 
+							document.write(output);
+			}
+
+		
+		}
+	</script>
+</body>
+</html>

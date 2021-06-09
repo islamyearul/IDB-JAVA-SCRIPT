@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>switch with replace elseif</title>
+</head>
+<body>
+	<form action="" name="form">
+		<input type="text" name="datee">
+		<input type="button" onclick="myfunction()"  value="Check">
+	</form>
+
+<script>
+	function myfunction(){
+		var day =parseInt(document.form.datee.value);
+		
+		var week;
+		switch (day) {
+			    case 0:
+				week = "Sunday"
+				break;
+				case 1:
+				week = "Monday"
+				break;
+				case 2:
+				week = "Tuesday"
+				break;
+				case 3:
+				week = "Wednesday"
+				break;
+				case 4:
+				week = "Thursday"
+				break;
+				case 5:
+				week = "Friday"
+				break;
+				case 6:
+				week = "Sataurday"
+				break;
+		}
+		document.write("Today Is " + week)
+	}
+	document.getElementById(show).innerHTML= myfunction();
+</script>
+<div id="show"></div>
+
+
+	<script>
+		/*var d = new Date(2021, 3, 5);
+		var day = d.getDay();
+		var week;
+		switch (day) {
+			    case 0:
+				week = "Sunday"
+				break;
+				case 1:
+				week = "Monday"
+				break;
+				case 2:
+				week = "Tuesday"
+				break;
+				case 3:
+				week = "Wednesday"
+				break;
+				case 4:
+				week = "Thursday"
+				break;
+				case 5:
+				week = "Friday"
+				break;
+				case 6:
+				week = "Sataurday"
+				break;
+		}
+		document.write("Today Is " + week)
+	</script>
+</body>
+</html>

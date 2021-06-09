@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="myform">
+		<input type="text" name="mynumber">
+		<input type="button" value="Check" onclick="myfunction()">
+	</form>
+	<script>
+		function myfunction(){
+			var x = document.myform.mynumber.value;
+			if (x<12) {
+			document.write("Good Morning")
+		} else if (x<15) {
+			document.write("Good Evening")
+		} else 
+		document.write("Good Night")
+
+		}
+
+document.getElementById(show).innerHTML= myfunction();
+
+
+	</script>
+	<div id="show"></div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Check Box</title>
+</head>
+<body>
+	<form action="" name="myform">
+		<input type="text" name="name"><br>
+		<label>Hobbies:</label><br>
+		<input type="checkbox" name="hobbies" value="football"><label for="">Football</label><br>
+		<input type="checkbox" name="hobbies" value="cricket"><label for="">Cricket</label><br>
+		<input type="checkbox" name="hobbies" value="hocky"><label for="">Hocky</label><br>
+		<input type="button" onclick="getmassage()" value="Click">
+	</form>
+
+	<script>
+		function getmassage(){
+		//	var x = document.myform.name.value;
+			//alert(x)
+		//
+
+
+	var checkboxes = document.getElementsByName('hobbies');
+  for (var checkbox of checkboxes) {
+    if (checkbox.checked)
+     var x =  document.body.append(checkbox.value + ' ');
+  }
+	}
+
+	
+
+	
+	</script>
+</body>
+</html>

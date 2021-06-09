@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1 align="center">Form and Java Script</h1><hr><br>
+
+	<form action="" name="myform" align="center">
+		<input type="text" name="fname" placeholder="First name" required="required"><br><br>
+		<input type="text" name="lname" placeholder="Last name" required="required"><br><br>
+		<input type="text" name="tsp" value="The Computer Ltd." readonly=""><br><br>
+		<input type="button" value="Click Here" onclick="myfunction()">
+
+	</form>
+	<script>
+		function myfunction(){
+
+		var x = document.myform.fname.value;
+		var y = document.myform.lname.value;
+		var z = document.myform.tsp.value;
+        document.getElementById('show').innerHTML = "Welcome Mr " + x + " "+  y + " In " + "<b>" + z + "<b>";
+}
+        
+	</script><hr><br>
+
+	<div id="show" align="center">
+		<center><h4>Here Is Content</h4></center>
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Do While Loop</title>
+</head>
+<body>
+	<div>
+		<script>
+			var i = 20;
+			do{
+				document.write(i + "<br>");
+				i--;
+
+			}
+			while(i > 0)
+		</script>
+	</div><hr><br>
+
+	<script>
+		var flowers = new Array("Rose", "Waterlily", "Bali", "lily", "sunflower");
+		var i = 0;
+		do{
+			document.write(flowers[i] + "<br>");
+			i++
+
+		}while(i<flowers.length)
+	</script><hr><br>
+
+<script>
+	var flowers = new Array("Rose", "Waterlily", "Bali", "lily", "sunflower");
+	 text = "";
+	 i = 0;
+	do{
+		text += flowers[i] + "<br>";
+		i++;
+	}while(i<flowers.length);
+	document.write(text)
+</script>
+</body>
+</html>
