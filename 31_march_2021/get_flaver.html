@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function getFlavor(){
+			var scoop = document.icecream.flavours;
+			var cone = scoop.options[scoop.selectedIndex].value;
+			if (cone !="Flavor Menu") {
+				alert("Here\'s your " + cone + " ice cream cone!")
+			}
+		}
+	</script>
+	<form action="" name="icecream">
+		<h3>Select your flavour from the menu</h3>
+		<select name="flavours" id="" onchange="getFlavor()">
+			<option value="Null" name="dummy">Flavour Menu</option>
+			<option value="Peach" name="peach">Peach</option>
+			<option value="Peppermint" name="Peppermint">Peppermint</option>
+			<option value="RasberrySwirl" name="Rasberry-Swirl">Rasberry-Swirl</option>
+			<option value="RunRaisin" name="Run-Raisin">Run-Raisin</option>
+		</select>
+	</form>
+</body>
+</html>

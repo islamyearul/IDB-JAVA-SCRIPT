@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Submit Button Validation</title>
+</head>
+<body>
+	<form method="post" action="islam.php" name="myform" onsubmit="return chackITout(this)">
+		<input type="text" name="name" placeholder="enter Name"><br>
+		<input type="submit" name="submit" value="Submit">
+
+	</form>
+	<script>
+		function chackITout(form){
+			var urName = document.myform.name.value;
+			if (urName=="") {
+				alert("Please enter your name");
+				return false;
+			} else {
+				alert("Thanks " + urName);
+				return true;
+			}
+		}
+	</script>
+</body>
+</html>

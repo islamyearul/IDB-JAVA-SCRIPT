@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var acme = new Object();
+		acme.management = "Management Coordinates everything.";
+		acme.management = new Object();
+
+		acme.management.rand ="Research and Development works to develop new and better products and services.";
+		acme.finance  = "Fiannce keeps track of the money.";
+		acme.production = "Production makes the stuff.";
+
+		acme.marketing = "Marketing develops strategies to target markets for the products.";
+		acme.marketing = new Object();
+
+		acme.marketing.sales = "Sales contracts porential cliests and sells the product";
+
+		acme.fullfillment = "Fullfillment delivers sold products.";
+
+		var display = "<h2> First the properties of the acme object</h2>";
+		for ( var counter in acme){
+			display += counter + "<br>";
+
+		}
+		display += "<h3>And now the values of the properties of management and marketing</h3>";
+		display +=acme.management.rand + "<br>";
+		display += acme.marketing.sales;
+		document.write(display)
+
+	</script><br><hr>
+	<script>
+		var bolts = 150, lot=60;
+		bolts %=lot;
+		document.write("Odd lot=" + bolts);
+	</script>
+</body>
+</html>

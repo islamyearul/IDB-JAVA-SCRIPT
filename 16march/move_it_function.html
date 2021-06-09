@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var score = 0;
+		function moveIt(){
+			var result = score += 1;
+			//document.getElementById('show').innerHTML = result;
+			document.myform.mynumber.value = result;
+		}
+	</script>
+
+<div>
+	<form name="myform">
+		<input type="text" name="mynumber" size="50">
+	</form>
+
+	<a href="" onmousemove="moveIt()">Move Your Mouse Here</a><br><hr>	
+	<a href="" onmouseover="moveIt()">over Your Mouse Here</a><br>
+	<!-- <a href="" onmousedown="moveIt()">down Your Mouse Here</a><br>
+	<a href="" onmouseup="moveIt()">up Your Mouse Here</a><br>
+	<a href="" onmouseenter="moveIt()">enter Your Mouse Here</a><br>
+	<a href="" onmousewheel="moveIt()">wheel Your Mouse Here</a><br>
+	<a href="" onmouseleave="moveIt()">leave Your Mouse Here</a><br> -->
+</div><br><hr>
+<div>
+	<!-- <center><H1 id="show"></H1></center> -->
+	<marquee behavior="" direction=""> <img src="Capture.PNG" alt="">
+	</marquee>
+</div>
+
+</body>
+</html>

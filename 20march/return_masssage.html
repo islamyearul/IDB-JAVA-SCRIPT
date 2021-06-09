@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body bgcolor="mistyrose">
+
+	<div>
+		<h1 id="show"></h1>
+	</div>
+
+
+	<script>
+		function returnmassage(){
+			var part1 = "Good ";
+			var part2 = "Morning";
+			var all = part1+part2;
+			return all;
+		}
+
+		var output = returnmassage();
+		// document.write(output);
+		document.getElementById("show").innerHTML = output;
+
+
+	</script>
+	
+</body>
+</html>

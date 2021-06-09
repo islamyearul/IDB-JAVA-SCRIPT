@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body bgcolor="#F17F7F" onload="window.document.petstore.reset()">
+	<script>
+		function doIt(){
+			window.document.petstore.puppy.value="Swissy";
+			window.document.petstore.clocker.value="I\'ve been clicked";
+		}
+	</script>
+	<form action="" name="petstore">
+		<input type="text" name="puppy">
+		<input type="button" name="clicker" value="Click Here" onclick="doIt()">
+		<input type="button" name="clicker" value="Mouse Over Here" onmouseover="doIt()">
+		<input type="button" name="clicker" value="Double Click" ondblclick="doIt()">
+		<input type="button" name="clicker" value="On Blur" onblur="doIt()">
+		<input type="button" name="clicker" value="Mouse Down" onmousedown="doIt()">
+	</form>
+	<span>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Impedit, rerum.</span>
+	
+</body>
+</html>

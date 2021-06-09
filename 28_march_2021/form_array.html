@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+</head>
+<body>
+	<form action="" name="reg1">
+		<input type="text" name="full name"><br>Full Name<br>
+		<input type="text" name="father name"><br>Father name<br>
+		<input type="number" name="age"><br>Age <br>
+		<!-- <input type="radio" name="gender" value="Male">Male
+		<input type="radio" name="gender" value="FeMale">Male <br>
+		<input type="checkbox" name="hobby" value="Cricket">Cricket
+		<input type="checkbox" name="hobby" value="Football">Football
+		<input type="checkbox" name="hobby" value="Hocky">Hocky <br> -->
+		<textarea name="massage" id="" cols="30" rows="10"></textarea>
+		<input type="button" value="Submit" name="button" onclick="allfields()">
+
+	</form>
+	<div>
+		<p id="show"></p>
+	</div>
+	<script>
+		function allfields(){
+		var len = document.reg1.length-2;
+		var result="";
+		
+		for(i=0; i<len; i++){
+			var title = document.forms[0].elements[i].name;
+			var upt  = title.toUpperCase();
+			result += upt + ": " +document.forms[0].elements[i].value 
+			//+ "<br>"
+			document.forms[0].elements[3].value = result;
+
+		}
+		//document.getElementById("show").innerHTML = result;
+
+			}
+	</script>
+</body>
+</html>

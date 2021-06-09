@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<style>
+		table{
+			margin-top: 50px;
+		}
+		form{
+			border: 3px solid black;
+			border-radius: 10px;
+			width: 500px;
+			height: 400px;
+			margin-left: 350px;
+			margin-top: 50px;
+			background-color: #F2EAEA;
+			font-size: 16pt;
+		}
+
+	</style>
+</head>
+<body bgcolor="#E7E6EA">
+	<div>
+	<form action="#" name="form">
+		<h2 align="center">Student Registration Form</h2>
+		<table align="center" cellpadding="5px">
+			<tr>
+			    <td>ID: </td>
+			    <td><input type="text" name="idname" placeholder="enter your id"></td>
+			</tr>
+			<tr>
+				<td>Name: </td>
+				<td>
+					<textarea name="name" id="name" cols="22" rows="2" placeholder="enter your name"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>Round: </td>
+				<td>
+					<select name="round" id="round">
+						<option value="-1">--Select One--</option>
+						<option value="48">48</option>
+						<option value="47">47</option>
+						<option value="46">46</option>
+						<option value="45">45</option>
+						<option value="44">44</option>
+						<option value="43">43</option>
+						<option value="42">42</option>
+						<option value="41">41</option>
+						<option value="40">40</option>
+						<option value="39">39</option>
+						<option value="38">38</option>
+						<option value="37">37</option>
+						<option value="36">36</option>
+						<option value="35">35</option>
+						<option value="34">34</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Gender: </td>
+				<td>
+					<input type="radio" name="gender" value="Male">Male
+					<input type="radio" name="gender" value="Female">Female
+					<input type="radio" name="gender" value="Others">Others
+				</td>
+			</tr>
+			<tr>
+				<td>Education:</td>
+				<td class="edu">
+					<input type="checkbox" name="education" class="edu" value="SSC">SSC
+					<input type="checkbox" name="education" class="edu" value="HSC">HSC
+				</td>
+			</tr>
+			<tr>
+				<td align="right">
+					<input type="submit" name="submit" value="Submit" onclick="myfun()">
+				</td>
+				<td>
+					<input type="reset" name="reset" value="Reset">
+				</td>
+			</tr>
+
+		</table>
+	</form>
+	</div>
+	<script>
+		function myfun(){
+			var idd = document.form.idname.value;
+			var name = document.form.name.value;
+			var round = document.form.round.value;
+			var gender = document.form.gender.value;
+
+			var education = document.getElementsByClassName("edu")
+			var check = " ";
+			for(var i = 0; i<education.length; i++){
+				if (education[i].checked === true) {
+					check += education[i].value + ", "
+				}
+					}
+
+			var display = "ID: " + idd + "<br>" 
+				display += "Name: " + name + "<br>" 
+				display += "Round: " + round + "<br>" 
+				display +=	"Gender: " + gender + "<br>" 
+				display +=	"Education: " + check
+
+			var win = window.open("", "Window", "height=300, width=500")
+			win.document.write(display)
+
+		}
+	</script>
+	<SCRIPT>
+		// function myfun(){
+		// 	var idd = document.form.idname.value;
+		// 	var name = document.form.name.value;
+		// 	var round = document.form.round.value;
+		// 	var gender = document.form.gender.value;
+
+		// 	var education = document.getElementsByClassName("edu")
+		// 	var check = " ";
+		// 	for(var i = 0; i<education.length; i++){
+		// 		if (education[i].checked === true) {
+		// 			check += education[i].value + ", "
+
+		// 		}
+		// 	}
+		// 	document.write("ID: " + idd + "<br>" + "Name: " + name + "<br>" + "Round: " + round + "<br>" + "Gender: " + gender + "<br>" + "Education: " + check )
+
+
+
+		// //document.getElementById("show").innerHTML = idd
+
+		// }
+		
+	</SCRIPT>
+	<div id="show"></div>
+</body>
+</html>

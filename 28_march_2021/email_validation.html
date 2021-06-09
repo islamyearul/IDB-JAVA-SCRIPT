@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login Form</title>
+</head>
+<body>
+	<form action="" name="login">
+		<input type="email" name="email" placeholder="enter valid email"><br>Email<br>
+		<input type="password" name="password" placeholder="enter password"><br>Password<br>
+		<input type="button" name="submit" value="Login" onclick="validate()">
+	</form>
+
+	<script>
+		function validate(){
+			var email = document.login.email.value;
+		 	var pass = document.login.password.value.length;
+		    var pattern = email.search(/[a-zA-Z]+@[a-z]+\.[a-zA-Z]{2,3}/);
+
+		//     if(pass<8 || pattern == -1){
+		//     	alert("All Data is Invalid");
+		//     	return false;
+		//     } else{
+		//     	alert("All Data Is Valid");
+		//     	return true;
+		//     }
+
+		// }
+		var status =false;
+
+		if(pattern==-1){
+			alert("Email address is invalid");
+			status = false;
+		} else {
+			status = true;
+		}
+		
+		if(pass<5){
+			alert("password must be 5 characters");
+			status = false;		
+		} else {
+			status = true;
+		}
+
+		if(status==true){
+			alert("All Data Is Validated")
+		}
+	}
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script>
+		// function validit(){
+		// 	var email = document.login.email.value;
+		// 	var pass = document.login.password.value.length;
+		// 	var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i;
+
+			//var val = email.value.match(validRegex);		
+
+			// match(/[a-zA-Z0_-9]+@+[a-z]+\.[a-z]{2, 3}/, email)
+
+			// var pattern = email.search(/[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z]+\.[a-zA-Z]{2, 3}$/i);
+			// if (pass<8 || email.value.match(validRegex)) {
+			// 	alert("valid pass")
+			// 	document.form1.text1.focus();
+
+   //                return true;
+			// } else {
+			// 	alert("all valid");
+			// 	 document.form1.text1.focus();
+
+   //               return false;
+			// }
+
+			// // if (pass<8) {
+			// // 	alert("Password Should Be 8 or More Characters");
+			// // } else 
+
+			// if (	
+			// }
+
+			// else{
+			// 	alert("You have entered an invalid email address!")return (false)
+			// }
+			// // var char = charAt(pos: int)
+			// // if (emailv) {};
+
+		//}
+	</script>
+</body>
+</html>

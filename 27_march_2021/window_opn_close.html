@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<button onclick="openwin()">Open Window</button><br><br>
+		<button onclick="closewin()">Close Window</button><br><br>
+		<button onclick="checkwin()">Check Window</button><br><br>
+	</div>
+	<script>
+		var mywindow
+		function openwin(){
+			mywindow = window.open("http://www.javascriptkit.com/filters/", "Open Window", "width=800, height=600");
+			mywindow.defaultStatus = "Today Is Bad Day";
+			mywindow.document.write("Welcome To new Win:  " + mywindow.name);
+			mywindow.document.write("<br>" + mywindow.defaultStatus)
+		}
+
+		function closewin(){
+			mywindow.close()
+		}
+
+		function checkwin(){
+			if (!mywindow) {
+				alert("My Window is nit yet opened");
+			} else {
+				if (!mywindow.closed) {
+					alert(mywindow.name + " is now opened");
+
+				} else {
+					alert(mywindow.name + " is being closed");
+
+				}
+			}
+		}
+	</script>
+</body>
+</html>

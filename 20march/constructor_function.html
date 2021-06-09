@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	     var totalp = new Function("price", "tax", "return price += (price*tax)/100");
+	    var output = totalp(100, 5);
+	    document.write(output + "<br>"); 
+
+	</script>
+</body>
+</html>

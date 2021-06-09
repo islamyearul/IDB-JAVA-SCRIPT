@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// var myd = new Date();
+
+		
+
+		//  myd.setDate(myd.getDate()+99000000);
+
+		// document.write(myd);
+
+
+	</script>
+	<script>
+		var a = new Date;
+		var aaa = a.getDate();
+		document.write("getDate " + aaa + "<br><hr>");
+				//Get the day of the month as a number (1-31)
+		var b =a.getDay(4);
+		document.write("getDay " + b + "<br><hr>");
+				//The weekday as a number (0-6)
+		var c = a.getFullYear();
+		document.write("getFullYear " + c + "<br><hr>");
+				//Year as a four digit number (yyyy)
+		var d = a.getHours();
+		document.write("getHours " + d + "<br><hr>");
+				//Get the hour (0-23)
+		var bb = a.getMilliseconds();
+		document.write("getMilliseconds " + bb + "<br><hr>");
+				//The millisecond (0-999)
+		var e = a.getMinutes();
+		document.write("getMinutes " + e + "<br><hr>");
+				//Get the minute (0-59)
+		var f = a.getMonth();
+		document.write("getMonth " + f + "<br><hr>");
+				//Month as a number (0-11)
+		var g = a.getSeconds();
+		document.write("getSeconds " + g + "<br><hr>");
+				//Get the second (0-59)
+		var h = a.getTime();
+		document.write("getTime with milisecond " + h + "<br><hr>");
+				//Get the milliseconds since January 1, 1970
+		var i = a.getUTCDate();
+		document.write("getUTCDate " + i + "<br><hr>");
+
+	</script><br><hr>
+	<script>
+		var a = new Date;
+		var aaa = a.setDate(+7);
+		document.write("setDate " + aaa + "<br><hr>");
+
+		var cc = a.setMonth();
+		document.write("setMonth " + cc + "<br><hr>");
+
+		var h = a.setHours(0, 0, 0, 0);
+		document.write("setHours " + h + "<br><hr>");
+
+	</script>
+
+</body>
+</html>
