@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		form{
+			font-size: 20pt;
+			margin-left: 400px;
+			margin-top: 200px;
+			font-weight: bold;
+			font-family: verdana;
+			color: #488506;
+			background: #D3BFBF;
+			height: 300px;
+			width: 400px;
+			padding: 50px;
+
+		}
+	</style>
+</head>
+<body bgcolor="#EFF7F6">
+	<div>
+		<form action="" name="form">
+			<input type="email" name="email">Email <br><br>
+			<input type="email" name="conemail"> Confirm Email <br><br>
+			<input type="button" name="button" value="Check" onclick="myfun()">
+		</form>
+	</div>
+	<script>
+		function myfun(){
+			var status = false;
+			var pattern = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i;
+			var email = document.form.email.value;
+			var confirmemail = document.form.conemail.value;
+			var check = email.search(pattern);
+			var check2 = confirmemail.search(pattern);
+			if(check==-1){
+				alert("Please Enter Valid Email Address")
+			} else if(check!==check2) {
+				alert("Email Does not Match")
+				
+			} else{
+				alert("Email Address Is valid")
+			}
+		}
+	</script>
+</body>
+</html>

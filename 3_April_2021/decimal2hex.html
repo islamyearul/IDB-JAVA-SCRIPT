@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			font-family: verdana;
+			background: a91723;
+			color: fcc0b9;
+			font-weight: bold;
+			font-size: 10pt;
+		}
+		form{
+			margin-left: 350px;
+			background-color: #2A2121;
+			color: #02C7EB;
+			height: 300px;
+			width: 600px;
+			padding: 30px  ;
+			font-size: 20pt;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<center><H2>Decimal to HexaDicimal Converter</H2><br></center>
+		<form action="" name="convert">
+			<input type="text" name="dec1" size="3">&nbsp;
+			<input type="text" name="dec2" size="3">&nbsp;
+			<input type="text" name="dec3" size="3"> &nbsp; <label for="dec">Enter Decimal Number Here</label><br><br>
+			<input type="text" name="hex" size="6"> &nbsp; <label for="hex">View HexaDecimal Number here</label><br><br>
+			<input type="button" name="button" value="Convert To Hexadecimal" onclick="converthex()">
+		</form>
+		<script>
+			function converthex(){
+				var accum ="";
+				for(var i=0; i<3; i++){
+					var dec = document.convert.elements[i].value;
+					var toNum = Math.floor(dec);
+				
+					var toHex = toNum.toString(16);
+					//alert(toHex)
+					if (toHex.length==1) {
+						toHex ="0" + toHex;
+					}
+					accum +=toHex;
+				}
+				document.convert.hex.value=accum;
+			}
+		</script>
+	</div>
+</body>
+</html>

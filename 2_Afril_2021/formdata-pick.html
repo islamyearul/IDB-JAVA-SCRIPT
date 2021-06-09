@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		form{
+			height: 450px;
+			width: 700px;
+			border: 3px solid red;
+			background-color: #ECE8E8;
+			margin-top: 50px;
+			margin-left: 400px;
+		
+			font-size: 20pt;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form action="" name="myf">
+			<table align="center" cellpadding="5px" width="50%">
+				<tr>
+					<td>Name: </td>
+					<td>
+						<input type="text" name="name">
+					</td>
+				</tr>
+				<tr>
+					<td>Contact: </td>
+					<td>
+						<input type="text" name="contact">
+					</td>
+				</tr>
+				<tr>
+					<td>Remarks: </td>
+					<td>
+						<textarea name="remarks" id="" cols="30" rows="5"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>Sex: </td>
+					<td>
+						<input type="radio" name="sex" value="Male">Male
+						<input type="radio" name="sex" value="Female">Female
+						<input type="radio" name="sex" value="other">Other
+					</td>
+				</tr>
+				<tr>
+					<td>Course: </td>
+					<td>
+						<input type="checkbox" name="course" class="sex" value="NT">NT
+						<input type="checkbox" name="course" class="sex" value="TAD">IAD
+						<input type="checkbox" name="course" class="sex" value="DDD">DDD
+						<input type="checkbox" name="course" class="sex" value="ESAD">ESAD
+					</td>
+				</tr>
+				<tr>
+					<td>Location: </td>
+					<td>
+						<select name="location" id="">
+							<option value="Banabi" name>Banani</option>
+							<option value="Mirpur" name>Mirpur</option>
+							<option value="Dhanmondi" name>Dhanmondi</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" name="submit" value="Submit" onclick="myfun()">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script>
+		function myfun(){
+			var name = document.myf.name.value;
+			var contact = document.myf.contact.value;
+			var remarks = document.myf.remarks.value;
+			var sex = document.myf.sex.value;
+			var location = document.myf.location.value;
+			var course = document.getElementsByClassName('sex');
+			var cresult = "";
+			for(var i=0; i<course.length; i++){
+				if (course[i].checked) {
+					cresult += course[i].value + ", "
+				}
+			}
+
+
+
+			var result = "Name: " + name + "<br>"+"Contact: " + contact + "<br>"+"Remarks: " + remarks + "<br>"+"Sex: " + sex + "<br>"+"Location: " + location + "<br>"+"Course: " + cresult + "<br>";
+			var newWin = window.open("", "Open Window", "height=800, width=500");
+			newWin.document.write(result);
+
+
+
+		}
+	</script>
+</body>
+</html>
