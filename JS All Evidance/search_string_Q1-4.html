@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form">
+		<label for="">Input</label><br><br>
+		<input type="text" name="input"><br><br>
+
+		<label for="">Search Key</label><br><br>
+		<input type="text" name="search"> <br><br>
+
+		<input type="button" name="btn" value="Search" onclick="searchString()">
+	</form>
+	<script>
+		function searchString(){
+			var input = document.form.input.value;
+			var searchh = document.form.search.value;
+
+			var res = input.search(searchh);
+			if (res==-1) {
+				alert("Search String Not Found");
+			} else{
+				alert("Search String Is :" + searchh + " and Index Position Is " + res);
+			}
+		}
+	</script>
+</body>
+</html>

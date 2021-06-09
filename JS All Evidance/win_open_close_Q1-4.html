@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form">
+		<input type="button" value="Open win" onclick="openWin()"><br><br>
+		<input type="button" value="Close win" onclick="closeWin()"><br><br>
+	</form>
+	<script>
+		var win;
+		function openWin(){
+			 win = window.open("", "My Win ", "height=300, width=500");
+		}
+		function closeWin(){
+			win.close()
+		}
+	</script>
+</body>
+</html>

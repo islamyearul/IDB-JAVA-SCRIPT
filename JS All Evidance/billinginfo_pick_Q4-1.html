@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		form{
+			margin-top: 50px;
+			border: 5px solid red;
+			font-size: 20pt;
+			background: #F4D5D5;
+			width: 800px;
+			height: 500px
+
+		}
+		div{
+			margin-left: 250px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form action="" name="billform">
+			<table width="70%" align="center" cellpadding="5px" >
+				<tr>
+					<td>First Name: </td>
+					<td>
+						<input type="text" name="fname">
+					</td>
+				</tr>
+				<tr>
+					<td>Last Name: </td>
+					<td>
+						<input type="text" name="lname">
+					</td>
+				</tr>
+				<tr>
+					<td>Gender: </td>
+					<td>
+						<input type="radio" name="gender" value="Male">Male
+						<input type="radio" name="gender" value="Female">Female
+					</td>
+				</tr>
+				<tr>
+					<td>Language: </td>
+					<td>
+						<input type="checkbox" name="language" value="Telugnu" class="lan">Telugnu 
+						<input type="checkbox" name="language" value="English" class="lan">English 
+						<input type="checkbox" name="language" value="Hindi" class="lan">Hindi 
+					</td>
+				</tr>
+				<tr>
+					<td>Email: </td>
+					<td>
+						<input type="email" name="email">
+					</td>
+				</tr>
+				<tr>
+					<td>Address: </td>
+					<td>
+						<textarea name="address" id="" cols="30" rows="5"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>State: </td>
+					<td>
+						<select name="state" id="">
+							<option value="" name="state">--Chose State--</option>
+							<option value="Dhaka" name="state">Dhaka</option>
+							<option value="Noakhali" name="state">Noakhali</option>
+							<option value="Khulna" name="state">Khulna</option>
+							<option value="Barishal" name="state">Barishal</option>
+							<option value="Bogra" name="state">Bogra</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Zip: </td>
+					<td>
+						<input type="text" name="zip">
+					</td>
+				</tr>
+				<tr>
+					<td>Credit Card Type: </td>
+					<td>
+						<select name="card" id="">
+							<option value="" name="card">--Chose Credit Card--</option>
+							<option value="VISA" name="card">VISA</option>
+							<option value="Master" name="card">Master</option>
+							<option value="Supper" name="card">Supper</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<button type="button" name="button" onclick="getbill()"> Submit </button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+
+	<script>
+		function getbill(){
+			var fname = document.billform.fname.value;
+			var lname = document.billform.lname.value;
+			var gender = document.billform.gender.value;
+			var email = document.billform.email.value;
+			var address = document.billform.address.value;
+			var state = document.billform.state.value;
+			var zip = document.billform.zip.value;
+			var card = document.billform.card.value;
+			var language = document.getElementsByClassName("lan");
+			var lanresult="";
+			for(var i =0; i<language.length; i++){
+				if (language[i].checked) {
+					lanresult += language[i].value + ", "
+				}
+				 
+			}
+
+			var finalresult = "First Name Is: " + fname + "<br>"+ "Last Name Is: " + lname + "<br>" + "Gender: " + gender + "<br>" + "Language: " + lanresult + "<br>" + "Email: " + email + "<br>" + "Address: " + address + "<br>" + "State: " + state + "<br>" + "Zip: " + zip + "<br>" + "Credit Card Type: " + card + "<br>" 
+			//document.write(finalresult)
+
+
+			var newWin = window.open("", "My win", "height=500, width=600");
+			newWin.document.write(finalresult)
+		}
+	</script>
+</body>
+</html>

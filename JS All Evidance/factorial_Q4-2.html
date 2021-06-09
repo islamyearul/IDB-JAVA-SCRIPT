@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form">
+		<label for="">Enter Number  </label>
+		<input type="text" name="input"><br><br>
+		<input type="button" value="Check" onclick="myfun()">
+	</form> <br><br>
+	
+	<script>
+		function myfun(){
+			var input = document.form.input.value;
+			var fact = 1;
+			for(var i=1; i<=input; i++){
+				fact*=i;
+			}
+			document.write("Factorial is "+fact);
+		}
+	</script>
+</body>
+</html>

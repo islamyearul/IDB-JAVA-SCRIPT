@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: #E0FAF5;
+			margin: 100px 300px;
+			border: 5px solid red;
+			padding: 50px;
+			font-size: 25px;
+		}
+	</style>
+</head>
+<body>
+	<form action="" name="form" onsubmit="return emailcheck()">
+		<input type="text" name="email" placeholder="Enter Your Email Address"><br><br>
+		<input type="text" name="cemail" placeholder="Repeat Email Address"> <br><br>
+		<input type="submit" name="" value="Check">
+
+	</form>
+	<script>
+		function emailcheck(){
+			var emailData = document.form.email.value;
+			var email = emailData.search(/[a-zA-Z0-9]+@[a-z]+\.[a-zA-Z]{2,3}/);
+			var cemailData = document.form.cemail.value;
+			var cemail = cemailData.search(/[a-zA-Z0-9]+@[a-z]+\.[a-zA-Z]{2,3}/);
+			if (email==-1 || cemail==-1) {
+				alert("Email address is invalid");	
+				return false;
+
+			} else if (emailData != cemailData) {
+				alert("Email addresses are not same")
+				return false;
+
+			} else{
+				alert("Email Address is validate");
+			}
+		}
+	</script>
+</body>
+</html>

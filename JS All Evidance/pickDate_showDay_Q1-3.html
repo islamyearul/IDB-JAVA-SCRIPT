@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form">
+		<label for="date">Enter Date</label><br><br>
+		<input type="date" name="date"><br><br>
+		<input type="button" name="day" value="Show Date" onclick="daTE()"><br><br>
+		<input type="button" name="day" value="Show Year" onclick="yeaR()"><br><br>
+		<input type="button" name="day" value="Show Day" onclick="daY()"><br><br>
+	</form>
+	<div id="show"></div>
+	<script>
+		function daTE(){
+			var userDate = document.form.date.value;
+		var daTe = new Date(userDate);
+		var date = daTe.getDate();
+		document.getElementById("show").innerHTML=date;
+		}
+
+		function yeaR(){
+			var userDate = document.form.date.value;
+		var daTe = new Date(userDate);
+		var year = daTe.getFullYear();
+		document.getElementById("show").innerHTML=year;
+		}
+
+		function daY(){
+			var userDate = document.form.date.value;
+		var daTe = new Date(userDate);
+		var week = ["sun", "mon", "tue", "wed", "thus", "fri", "Sat"]
+		var day = daTe.getDay();
+		document.getElementById("show").innerHTML=week[day];
+		}
+	</script>
+</body>
+</html>

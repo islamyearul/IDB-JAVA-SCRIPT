@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		body{
+			background-color: #E0FAF5;
+			margin: 100px 300px;
+			border: 5px solid red;
+			padding: 50px;
+			font-size: 25px;
+		}
+		form{
+			background-color: #F7C8C8;
+			padding: 20px
+		}
+	</style>
+</head>
+<body>
+	<form action="" name="form">
+		<label for="">Productname:</label>
+	<input type="text" name="pname"><br><br>
+	<label for="">Product Details:  </label><br>
+	<textarea name="pdetails" id="" cols="40" rows="5"></textarea><br>
+	<input type="radio" name="brand" value="Brand New">Brand New
+	<input type="radio" name="brand" value="Second Hand">Second Hand
+	<input type="radio" name="brand" value="Refurbished">Refurbished <br><br>
+	<label for="">Categories:</label>
+	<input type="checkbox" value="Shirt" class="categories">Shirt
+	<input type="checkbox" value="Trouser" class="categories">Trouser
+	<input type="checkbox" value="Pullover" class="categories">Pullover
+	<input type="checkbox" value="Sweater" class="categories">Sweater <br><br>
+
+	<input type="button" value="Submit" onclick="formdata()">
+
+	</form>
+	<script>
+		function formdata(){
+			var pname = document.form.pname.value;
+			var details = document.form.pdetails.value;
+			var brand = document.form.brand.value;
+			var cata = document.getElementsByClassName("categories");
+			var categories="";
+			for(var i = 0; i<cata.length;i++){
+				if (cata[i].checked) {
+					categories += cata[i].value + ", ";
+				} //end if
+			}//end loop
+
+			var res = "Product name: " + pname + "<Br>";
+			    res += "Product details: " + details + "<Br>";
+			    res += "Product brand: " + brand + "<Br>";
+			    res += "Product categories: " + categories + "<Br>";
+
+			    var win = window.open("", "My window", "height=300, width=500");
+			    win.document.write(res);
+		}
+	</script>
+ 
+
+</body>
+</html>

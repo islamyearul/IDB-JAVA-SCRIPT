@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Pass Fail Check</h1>
+	<form action="" name="form">
+		<label for="mcq">MCQ</label><br><br>
+		<input type="text" name="mcq"><br><br>
+		<label for="mcq">descriptive</label><br><br>
+		<input type="text" name="descriptive"><br><br>
+		<label for="mcq">evidance</label><br><br>
+		<input type="text" name="evidance"><br><br>
+		<input type="button" name="submit" value="Result" onclick="result()">
+	</form>
+	<script>
+		function result(){
+			var mcq = document.form.mcq.value;
+			var descriptive = document.form.descriptive.value;
+			var evidance = document.form.evidance.value;
+			if (parseInt(mcq) >= 80 && parseInt(descriptive) >= 60 && parseInt(evidance) >= 60) {
+				alert("Congratulation You Passed The Exam");
+				
+			} else{
+				alert('You are Fail');
+			}
+		}
+	</script>
+</body>
+</html>

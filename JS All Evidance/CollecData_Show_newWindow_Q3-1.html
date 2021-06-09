@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" name="form" onsubmit="return myfun()">
+		<label for="">Name: </label> &nbsp;<input type="text" name="name"><br><br>
+		<label for="">Phone: </label> &nbsp;<input type="text" name="phone"><br><br>
+		<label for="">Remarks: </label> &nbsp;
+		<textarea name="remarks" id="" cols="20" rows="5"></textarea><br><br>
+		<label for="">Gender:  </label> 
+		<input type="radio" value="Male" name="gender">Male
+		<input type="radio" value="Female" name="gender">Female <br><br>
+		<label for="">Course:  </label>
+		<input type="checkbox" name="course" value="NT" class="course">NT
+		<input type="checkbox" name="course" value="IAD" class="course">IAD
+		<input type="checkbox" name="course" value="DDD" class="course">DDD
+		<input type="checkbox" name="course" value="ESAD" class="course">ESAD <br><br>
+		<label for="">Location:  </label>
+		<select name="location" id="">
+			<option value="">--Select One--</option>
+			<option value="Mirpur">Mirpur</option>
+			<option value="Dhanmondi">Dhanmondi</option>
+			<option value="Banani">Banani</option>
+		</select><br><br>
+		<input type="submit" value="Submit">
+	</form>
+	<script>
+		function myfun(){
+			var name = document.form.name.value;
+			var phone = document.form.phone.value;
+			var remarks = document.form.remarks.value;
+			var gender = document.form.gender.value;
+			var location = document.form.location.value;
+			var course="";
+			var check = document.getElementsByClassName("course");
+			for(var i=0; i<check.length; i++){
+				if (check[i].checked) {
+					course += check[i].value + ", "
+				}
+			} //end loop
+
+			var result = "Name: " + name + "<br>";
+			    result += "Phone: " + phone + "<br>";
+			    result += "Location: " + location + "<br>";
+			    result += "Gender: " + gender + "<br>";
+			    result += "Course: " + course + "<br>";
+			    result += "Remarks: " + remarks + "<br>";
+
+			 var win = window.open("", "My Window", "height=500 width=600");
+			 win.document.write(result);
+		}
+	</script>
+</body>
+</html>

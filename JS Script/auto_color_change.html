@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		.Div {
+
+    position:absolute;
+
+    width: 800px;
+
+    height: 100px;
+
+    z-index: 15;
+
+    top: 50%;
+
+    left: 15%;
+
+    background: red;
+
+}
+	</style>
+</head>
+<body onLoad="setInterval()">
+
+
+<div id="myDiv" class="Div">
+
+<input type="button" onClick="stop()", value="I like this color" align="absmiddle">
+
+</div>
+	
+
+
+	 <script type="text/javascript">
+
+            var count = 0;
+
+            var interval;
+
+
+
+            function getRandom(num){
+
+                return Math.floor(Math.random()*num);
+
+
+
+            }
+
+
+
+            function changeColor(){
+
+                count ++;
+
+
+
+                var num1 = getRandom(255);
+
+                var num2 = getRandom(255);
+
+                var num3 = getRandom(255);
+
+                var col = "rgb("+num1+","+num2+","+num3+")";
+
+                var div = document.getElementById( 'myDiv' );
+
+                div.style.background = col;
+
+
+
+            }
+
+
+
+            function stop() {
+
+                clearInterval(interval);
+
+                alert('The background color has changed ' + count + ' times before you clicked me!');
+
+            }
+
+
+
+            interval = setInterval("changeColor()", 2000);
+
+
+
+</script>
+
+</body>
+</html>

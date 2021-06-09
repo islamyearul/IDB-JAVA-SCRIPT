@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Email Validation</title>
+</head>
+<body>
+	<script>
+		var data = prompt("Please Enter Your Email", "");
+		var pattern = data.search(/[a-zA-Z]+@[a-z]+\.[a-zA-Z]{2,3}/);
+		if (pattern== -1) {
+			alert("Please Enter A Valid Email");
+		} else{
+			alert("Congratulation You Enter A Valid Email");
+		}
+
+	</script>
+</body>
+</html>
